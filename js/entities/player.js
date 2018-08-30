@@ -20,23 +20,23 @@ class Player extends Entity {
     handleInput(direction) {
         switch (direction) {
             case 'left':
-                if (positionService.canPlayerMoveToDirectionX(this._position[0], direction)) {
-                    this._position[0] -= positionService.getPlayerStepLR();
+                if (this._positionService.canPlayerMoveToDirectionX(this._position[0], direction)) {
+                    this._position[0] -= this._positionService.getPlayerStepLR();
                 }
                 break;
             case 'up':
-                if (positionService.canPlayerMoveToDirectionY(this._position[1], direction)) {
-                    this._position[1] -= positionService.getPlayerStepUD();
+                if (this._positionService.canPlayerMoveToDirectionY(this._position[1], direction)) {
+                    this._position[1] -= this._positionService.getPlayerStepUD();
                 }
                 break;
             case 'right':
-                if (positionService.canPlayerMoveToDirectionX(this._position[0], direction)) {
-                    this._position[0] += positionService.getPlayerStepLR();
+                if (this._positionService.canPlayerMoveToDirectionX(this._position[0], direction)) {
+                    this._position[0] += this._positionService.getPlayerStepLR();
                 }
                 break;
             case 'down':
-                if (positionService.canPlayerMoveToDirectionY(this._position[1], direction)) {
-                    this._position[1] += positionService.getPlayerStepUD();
+                if (this._positionService.canPlayerMoveToDirectionY(this._position[1], direction)) {
+                    this._position[1] += this._positionService.getPlayerStepUD();
                 }
                 break;
         }
